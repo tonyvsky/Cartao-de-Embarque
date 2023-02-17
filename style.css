@@ -47,20 +47,23 @@ h1 {
 }
 
 p {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     color: rgba(0, 0, 0, 0.64);
 }
 
 strong {
     color: rgba(0, 0, 0, 0.88);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 section {
     background-color: white;
     padding: 2.4rem 3.4rem;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 }
 
 #boarding-pass {
@@ -75,6 +78,8 @@ section {
 .top {
     border-radius: 2.4rem 2.4rem 0 0;
     gap: 2.4rem;
+
+    --mask: radial-gradient(1.2rem at 1.2rem bottom, transparent 95%, black) -1.2rem;
 }
 
 .departure, .arrival {
@@ -82,16 +87,35 @@ section {
 }
 
 .departure strong, .arrival strong {
-    font-size: 40px;
-    line-height: 47px;
+    font-size: 4.0rem;
+    line-height: 4.7rem;
 }
 
 .airplane {
     align-self: center;
 }
 
+.top time {
+    color: rgba(0, 0, 0, 0.8);
+}
+.top time sup {
+    font-weight: 500;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+}
+
+.middle {
+    border: 1px dashed rgba(0, 0, 0, 0.32);
+    border-left: 0;
+    border-right: 0;
+
+    --mask: radial-gradient(1.2rem at 1.2rem 1.2rem, transparent 95%, black) -1.2rem -1.2rem;
+}
+
 .bottom {
     border-radius: 0 0 2.4rem 2.4rem;
+
+    --mask: radial-gradient(1.2rem at 1.2rem top, transparent 95%, black) -1.2rem;
 }
 
 .bottom .container {
@@ -99,17 +123,33 @@ section {
     gap: .8rem
 }
 
+dt time {
+    padding: .4rem .8rem;
+    background: #633BBC;
+    border-radius: .8rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    display: inline-block;
+    margin-top: .2rem;
+}
+
 .bottom > p {
     text-align: center;
     margin-top: 2.4rem;
-    line-height: 20px;
-    font-size: 16px;
+    line-height: 2.0rem;
+    font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.8);
 }
 
 dl.grid {
     gap: 1.6rem;
     min-width: 9.5rem;
+}
+
+.qrcode.grid {
+    justify-items: center;
 }
 
 footer {
@@ -119,5 +159,5 @@ footer {
     color: white;
     text-align: center;
     opacity: 0.64;
-    margin: 25px auto;
+    margin: 2.5rem auto;
 }
